@@ -36,12 +36,14 @@ deploy:
     - releases/*
   skip_cleanup: true
   on:
-    branch: master
+    branch: ci-test
+    tags: true
 
 branches:
   only:
   - master
   - dev
+  - ci-test
   
 notifications:
   email: false
